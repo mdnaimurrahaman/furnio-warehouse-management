@@ -1,0 +1,70 @@
+
+[
+  {
+    "_id": "1",
+    "name": "Wooden Chair",
+    "description": "a seat, especially for one person, usually having four legs for support and a rest for the back and often having rests for the arms.",
+    "price":"140",
+    "quantity": "150",
+    "supplier": "Jon doe",
+    "img": "https://i.ibb.co/swtbVLv/Screenshot-1.jpg"
+   
+  },
+  {
+    "_id": "2",
+    "name": "Relex Chair",
+    "description": "a seat, especially for one person, usually having four legs for support and a rest for the back and often having rests for the arms.",
+    "price":"150",
+    "quantity": "150",
+    "supplier": "Jon doe",
+    "img": "https://i.ibb.co/LhPJHpz/Screenshot-2.jpg"
+   
+  },
+  {
+    "_id": "3",
+    "name": "Minimal Table",
+    "description": "a seat, especially for one person, usually having four legs for support and a rest for the back and often having rests for the arms.",
+    "price":"110",
+    "quantity": "150",
+    "supplier": "Jon doe",
+    "img": "https://i.ibb.co/3pnmgDN/Screenshot-3.jpg"
+   
+  },
+  {
+    "_id": "4",
+    "name": "Single Sofas",
+    "description":"a seat, especially for one person, usually having four legs for support and a rest for the back and often having rests for the arms.",
+    "price":"120",
+    "quantity": "150",
+    "supplier": "Jon doe",
+    "img": "https://i.ibb.co/s9mh3Wm/Screenshot-4.jpg"
+   
+  },
+  {
+    "_id": "5",
+    "name": "Potato Chair",
+    "description":"a seat, especially for one person, usually having four legs for support and a rest for the back and often having rests for the arms.",
+    "price":"190",
+    "quantity": "150",
+    "supplier": "Jon doe",
+    "img": "https://i.ibb.co/hc74s20/Screenshot-5.jpg"
+   
+  },
+  {
+    "_id": "6",
+    "name": "Regular Chair",
+    "description":"a seat, especially for one person, usually having four legs for support and a rest for the back and often having rests for the arms.",
+    "price":"120",
+    "quantity": "150",
+    "supplier": "Jon doe",
+    "img": "https://i.ibb.co/N1TYsQJ/Screenshot-6.jpg"
+   
+  }
+]
+
+
+
+
+
+
+
