@@ -1,0 +1,33 @@
+.top-banner{
+    background-color: #fefed8;
+}
+.banner-title h1{
+    font-weight: 700;
+    font-size: 52px;
+}
+.banner-title span{
+    color: #f9a791;
+}
+/* .banner-title p{
+    background-color: #fde4de;
+    padding: 12px;
+    border-radius: 8px;
+} */
+.banner-img{
+    width:100%;
+}
+.btn-hero{
+    border: none;
+    height: 70px;
+    width: 215px;
+    padding: 15px;
+    font-weight: 600;
+    background-color: #096a62;
+    color: white;
+    border-radius: 50px;
+    margin-top: 15px;
+}
+.btn-hero:hover{
+    background-color: #097168d3;
+    transition: 0.3s all ease;
+}

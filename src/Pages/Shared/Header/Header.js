@@ -15,7 +15,7 @@ const Header = () => {
     }
 
     return (
-        <Navbar className='navbar' bg="" expand="lg" sticky='top'>
+        <Navbar className='navbar container' bg="" expand="lg" sticky='top'>
   <Container>
     <Navbar.Brand as={Link} to="/"><img src={logo} height="40" alt="" srcset="" /></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
