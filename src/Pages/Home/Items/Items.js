@@ -14,10 +14,12 @@ const Items = () => {
 
     return (
         <div>
-            <div className='container items-section'>
-                {
-                    items.map(item => <Item key={item._id} item={item}></Item>)
-                }
+            <div className='container'>
+                <div className=' row items-section'>
+                    {
+                        items.map(item => <Item key={item._id} item={item}></Item>)
+                    }
+                </div>
             </div>
         </div>
     );
