@@ -8,6 +8,9 @@ import Header from './Pages/Shared/Header/Header';
 import ManageItems from './Pages/Home/ManageItems/ManageItems';
 import AddITems from './Pages/Home/AddItems/AddITems';
 import MyItems from './Pages/Home/MyItems/MyItems';
+import Login from '../../furnio-minimal-design/src/Pages/Auth/Login/Login';
+import Signup from '../../furnio-minimal-design/src/Pages/Auth/Signup/Signup';
+import NotFound from '../../furnio-minimal-design/src/Pages/Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path='/manageItems' element={<ManageItems></ManageItems>}></Route>
         <Route path='/addItems' element={<AddITems></AddITems>}></Route>
         <Route path='/myItems' element={<MyItems></MyItems>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/signup' element={<Signup></Signup>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
