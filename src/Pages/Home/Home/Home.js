@@ -2,8 +2,10 @@ import React from 'react';
 import SecondBanner from '../2ndBanner/SecondBanner';
 import Banner from '../Banner/Banner';
 import Items from '../Items/Items';
+
+import ThirdBanner from '../ThirdBanner/ThirdBanner';
 import './Home.css'
-import ThirdBanner from './ThirdBanner/ThirdBanner';
+
 
 const Home = () => {
     return (

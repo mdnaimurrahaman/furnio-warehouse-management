@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Item from '../Home/Item/Item';
+// import Item from '../Home/Item/Item';
+import Item from '../Item/Item'
 import './Items.css'
 
 const Items = () => {
