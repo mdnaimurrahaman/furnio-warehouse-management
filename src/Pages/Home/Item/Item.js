@@ -1,9 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./Item.css";
 
 const Item = ({ item }) => {
-  const { name, description, price, quantity, supplier, img } = item;
+  const {_id, name, description, price, quantity, supplier, img } = item;
+  const navigate = useNavigate();
+  const navigateToItemDetail = _id =>{
+    navigate(`/item/${_id}`)
+  }
   return (
     <div className="g-5 col-sm-12 col-md-6 col-lg-4">
       <div className="items-container card p-0">
@@ -17,12 +22,11 @@ const Item = ({ item }) => {
             <p><small>Seller : {supplier}</small></p>
           </div>
         </div>
-        <Link
-          className="btn-update text-decoration-none text-white"
-          to="/checkout"
-        >
+        <button
+          onClick={() => navigateToItemDetail(_id)}
+          className="btn-update text-decoration-none text-white">
           Update
-        </Link>
+        </button>
       </div>
     </div>
   );

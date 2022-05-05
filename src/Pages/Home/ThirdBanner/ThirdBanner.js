@@ -1,6 +1,6 @@
 import React from 'react';
 import './ThirdBanner.css'
-import banner from '../../../images/Banner/benner-3.png'
+import banner from '../../../images/Banner/new-bannert_1.png'
 import icon1 from '../../../images/icon/4139635.png'
 import icon2 from '../../../images/icon/minimal.png'
 import icon3 from '../../../images/icon/best.png'
@@ -10,6 +10,9 @@ const ThirdBanner = () => {
         <div className='third-banner my-5'>
         <div className='container'>
             <div className='banner-container row align-items-center'>
+            <div className='col-sm-12 col-lg-6 p-5'>
+                    <img className='banner-img' src={banner} alt="" srcset="" />
+                </div>
                 <div className='banner-title col-sm-12 col-lg-6 p-5'>
                     <h2 className='fw-bold'>We provide You The Best Experience</h2>
                     <p className='mt-4'>Urna molestie at elementum eu facilisis. Venenatis a the inner condimentum vitae sapien pellentesque.</p>
@@ -27,9 +30,6 @@ const ThirdBanner = () => {
                         <h4>Best Quality Wood</h4>
                     </div>
                 </div>
-                </div>
-                <div className='col-sm-12 col-lg-6 p-5'>
-                    <img className='banner-img' src={banner} alt="" srcset="" />
                 </div>
             </div>
         </div>
