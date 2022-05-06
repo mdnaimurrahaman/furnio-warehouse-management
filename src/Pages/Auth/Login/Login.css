@@ -3,11 +3,11 @@
     width: 350px;
     margin: 4rem auto;
     height: 500px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     padding: 40px;
     box-sizing: border-box;
-    background: #fde7e1;
-    box-shadow: 14px 14px 20px #f5dbcf, -14px -14px 20px white;
+    background: #fefefeb1;
+    /* box-shadow: 14px 14px 20px #f5dbcf, -14px -14px 20px white; */
 }
 
 
@@ -16,7 +16,7 @@
     margin-top: 10px;
     font-weight: 900;
     font-size: 1.8rem;
-    color: #fd8c6c;
+    color: #338A7B;
     letter-spacing: 1px;
 }
 
@@ -54,28 +54,28 @@
     padding-left: 20px;
     height: 50px;
     font-size: 14px;
-    border-radius: 8px;
-    box-shadow: inset 6px 6px 6px #fad6c9, inset -6px -6px 6px white;
+    /* border-radius: 8px; */
+    /* box-shadow: inset 6px 6px 6px #fad6c9, inset -6px -6px 6px white; */
 }
 
 .login-container button {
     color: white;
     margin-top: 20px;
-    background: #f9a791;
+    background: #3db5a1;
     height: 40px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     cursor: pointer;
     font-weight: 900;
-    box-shadow: 6px 6px 6px #ebd9cc, -6px -6px 6px white;
+    /* box-shadow: 6px 6px 6px #ebd9cc, -6px -6px 6px white; */
     transition: 0.5s;
 }
 
 .login-container button:hover {
-    box-shadow: none;
+    background-color: #338A7B;
 }
 
 .sign-link{
-    color: #f36e49;
+    color: #338A7B;
 }
 
 

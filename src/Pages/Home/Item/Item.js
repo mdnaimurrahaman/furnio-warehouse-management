@@ -6,8 +6,8 @@ import "./Item.css";
 const Item = ({ item }) => {
   const {_id, name, description, price, quantity, supplier, img } = item;
   const navigate = useNavigate();
-  const navigateToItemDetail = _id =>{
-    navigate(`/item/${_id}`)
+  const navigateToItemDetail = id =>{
+    navigate(`/item/${id}`)
   }
   return (
     <div className="g-5 col-sm-12 col-md-6 col-lg-4">

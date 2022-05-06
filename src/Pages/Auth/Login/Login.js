@@ -60,7 +60,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/home"
+    const from = location.state?.from?.pathname || "/"
 
    useEffect(()=>{
     if(user){
@@ -117,13 +117,15 @@ const Login = () => {
                 {errors?.email && <p className='error-message'>{errors.email}</p>}
                 <input type="password" placeholder='password' onChange={handlePasswordChange}/>
                 {errors?.password && <p className='error-message'>{errors.password}</p>}
-                <button>Login</button>
+                <button className='login-btn'>Login</button>
 
                 <ToastContainer></ToastContainer>
                 <p className='text-center mt-3'>Forget password? <Link onClick={resetPassword} className='sign-link fw-bold pe-auto text-decoration-none' to="">Reset password</Link></p>
                 
             </form>
-            <button onClick={handleGoogleSignIn}>Google SignIn</button>
+            <div>
+                <button onClick={handleGoogleSignIn}>Google SignIn</button>
+            </div>
             <p className='text-center mt-3'>Don't have an account? <Link className='sign-link fw-bold pe-auto text-decoration-none' to="/signup">Sign up</Link></p>
         </div>
     );
