@@ -5,7 +5,7 @@ import Blogs from './Pages/Home/Blogs/Blogs';
 import Home from './Pages/Home/Home/Home';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
-import ManageItems from './Pages/Home/ManageItems/ManageItems';
+import ManageItems from './Pages/ManageItems/ManageItems';
 import AddITems from './Pages/Home/AddItems/AddITems';
 import MyItems from './Pages/Home/MyItems/MyItems';
 import Login from '../../furnio-minimal-design/src/Pages/Auth/Login/Login';

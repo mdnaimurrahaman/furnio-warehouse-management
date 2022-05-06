@@ -1,0 +1,11 @@
+.AllItems-section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .AllItems-section{
+        grid-template-columns: 1fr;
+    }
+  }
