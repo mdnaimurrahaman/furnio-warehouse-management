@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import useItems from '../../../Hooks/useItems';
 // import Item from '../Home/Item/Item';
 import Item from '../Item/Item'
 import './Items.css'
 
 const Items = () => {
 
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useItems();
 
-    useEffect(() => {
-        fetch('http://localhost:5000/item')
-        .then(res => res.json())
-        .then(data => setItems(data));
-    },[])
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/item')
+    //     .then(res => res.json())
+    //     .then(data => setItems(data));
+    // },[])
 
     return (
         <div>
             <div className='container'>
                 <div className=' row items-section'>
                     {
-                        items.map(item => <Item key={item._id} item={item}></Item>)
+                        items.slice(0,6).map(item => <Item key={item._id} item={item}></Item>)
                     }
                 </div>
             </div>

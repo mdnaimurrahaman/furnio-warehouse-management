@@ -31,7 +31,7 @@ const ItemDetail = () => {
           className="btn-update text-decoration-none text-white">
           Delivered
         </button>
-        <p className='text-center mt-3'>warehouse <Link className='sign-link fw-bold pe-auto text-decoration-none' to="/signup">manage Inventories</Link></p>
+        <p className='text-center mt-3'>warehouse <Link className='sign-link fw-bold pe-auto text-decoration-none' to="/manageItems">manage Inventories</Link></p>
         </div>
       </div>
     </div>
