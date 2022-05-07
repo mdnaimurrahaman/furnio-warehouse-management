@@ -27,6 +27,7 @@
 
 .login-container label,
 .login-container input,
+.login-container textarea,
 .login-container button {
     display: block;
     width: 100%;
@@ -47,7 +48,9 @@
     color: rgb(122, 113, 113);
 }
 
-.login-container input {
+.login-container input,
+.login-container textarea
+{
     background: #ecf0f3;
     margin: 15px 0 0 0;
     padding: 10px;
