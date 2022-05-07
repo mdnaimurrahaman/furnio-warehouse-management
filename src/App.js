@@ -13,6 +13,7 @@ import Signup from '../../furnio-minimal-design/src/Pages/Auth/Signup/Signup';
 import NotFound from '../../furnio-minimal-design/src/Pages/Shared/NotFound/NotFound';
 import ItemDetail from './Pages/ItemDetail/ItemDetail';
 import RequireAuth from '../src/Pages/Auth/RequireAuth/RequireAuth';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

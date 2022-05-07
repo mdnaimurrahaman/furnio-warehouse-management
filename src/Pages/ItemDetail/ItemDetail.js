@@ -1,5 +1,7 @@
+
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './ItemDetail.css'
 
 const ItemDetail = () => {
@@ -10,7 +12,63 @@ const ItemDetail = () => {
         fetch(url)
         .then(res=> res.json())
         .then(data => setItem(data));
-    },[])
+    },[itemId,item])
+
+  // quantity operations
+    const handleDelivered = (e) => {
+      e.preventDefault();
+      let quantity = item?.quantity;
+      quantity = parseInt(quantity)-1;
+      if(quantity <0){
+        return alert('Quantity can not be less then zero');
+      }
+
+      const url = `http://localhost:5000/quantity/${itemId}`
+      fetch (url , {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({quantity}),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        setItem({...data, quantity: quantity});
+        toast("Successfully Delivered");
+      });
+    };
+
+    //Add quantity
+    const handleUpdateQuantity = (e) =>{
+      e.preventDefault();
+      let quantity = item?.quantity;
+      const addQuantity = parseInt(e.target.quantity.value);
+      if(addQuantity > 0){
+        quantity = parseInt(quantity) + addQuantity;
+        const updateInventory = {quantity};
+        const url = `http://localhost:5000/quantity/${itemId}`
+        fetch(url, {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(updateInventory),
+        })
+        .then((res)=> res.json())
+        .then((data)=>{
+          console.log(data);
+          toast("quantity Updated")
+          e.target.reset();
+        })
+      } else {
+        alert ("Please insert positive number of quantity");
+        e.target.reset()
+        return;
+      }
+    }
+    
+
+
     return (
         <div className="container">
       <div className="items-container detail-container mt-5 card p-0">
@@ -23,11 +81,11 @@ const ItemDetail = () => {
             <p><small>Product Stock : {item.quantity}p</small></p>
             <p><small>Seller : {item.supplier}</small></p>
           </div>
-          <div className='mb-3 d-flex '>
-              <input className='' type="number" placeholder='Your Quantity' />
-              <button className='add-btn'>Add</button>
-          </div>
-          <button
+          <form onSubmit={handleUpdateQuantity} className='mb-3 d-flex '>
+              <input className='' type="number" name='quantity' placeholder='Your Quantity' />
+              <button type="submit" className='add-btn'>Add</button>
+          </form>
+          <button onClick={handleDelivered}
           className="btn-update text-decoration-none text-white">
           Delivered
         </button>
