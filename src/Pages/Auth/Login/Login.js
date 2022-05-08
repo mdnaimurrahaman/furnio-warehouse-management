@@ -64,7 +64,24 @@ const Login = () => {
 
    useEffect(()=>{
     if(user){
-        navigate(from,{replace:true});
+        const url = 'http://localhost:5000/login';
+        fetch (url,{
+            method: 'POST',
+            body: JSON.stringify({
+                title : 'foo',
+                body: 'bar',
+                email: user.email,
+            }),
+            headers:{
+                'content-type': 'application/json'
+            },
+        })
+        .then((response)=> response.json())
+        .then((data) => {
+            localStorage.setItem("accessToken", data.token);
+            navigate(from,{replace:true});
+        })
+
     }
    },[user])
 

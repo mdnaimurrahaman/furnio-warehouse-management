@@ -38,7 +38,7 @@ const Header = () => {
           :
           <Nav.Link className='fw-bold' as={Link} to="/login">Login</Nav.Link>
         }
-        <Nav.Link>{user?.email}</Nav.Link>
+        <Nav.Link>{user?.email.slice(0,10)}</Nav.Link>
     </Nav>
     </Navbar.Collapse>
   </Container>

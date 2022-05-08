@@ -1,3 +1,27 @@
 .blogs-container img{
-    width: 350px;
+    width: 355px;
+    margin-right: 40px;
+    /* padding: 20px; */
 }
+.blogs-container{
+    display: flex;
+    background-color: #f8f8f8 ;
+    padding: 40px;
+}
+
+.blogs-text{
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+    .blogs-container{
+        flex-direction: column;
+    }
+    .blogs-container img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .blogs-text{
+        flex-direction: column;
+    }
+  }

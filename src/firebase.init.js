@@ -6,12 +6,12 @@ import {getAuth} from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCNqHb4r2D44P_ZyRzDUP67x6Z_BDajOqk",
-  authDomain: "furnio-minimal-design.firebaseapp.com",
-  projectId: "furnio-minimal-design",
-  storageBucket: "furnio-minimal-design.appspot.com",
-  messagingSenderId: "532496260270",
-  appId: "1:532496260270:web:7aa3ff038c5d945ba3e13f"
+  apiKey:process.env.REACT_APP_apiKey,
+  authDomain:process.env.REACT_APP_authDomain,
+  projectId:process.env.REACT_APP_projectId,
+  storageBucket:process.env.REACT_APP_storageBucket,
+  messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  appId:process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
