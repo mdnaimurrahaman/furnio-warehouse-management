@@ -4,13 +4,13 @@ import banner from '../../images/Banner/Screenshot_5.jpg'
 
 const ExtraBanner = () => {
     return (
-        <div>
+        <div className='extra-banner'>
             <div className='container'>
                 <div className='banner-container row align-items-center'>
                     <div className='banner-title col-sm-12 col-lg-6 p-5'>
-                        <h1>Explore Minimal Design</h1>
-                        <p className='mt-4'>Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Nulla facilisi morbi tempus iaculis.</p>
-                        <button className='btn-hero'>Explore Now</button>
+                        <h2>Made With Love And Dedication</h2>
+                        <p className='mt-4'>Pulvinar neque laoreet suspendiss interdum consectetur. Nec ullamcorper sit amet risus nullam eget. Eget arcu dictum varius duis . Adipiscing at in tellus integer feugiat scelerisque.</p>
+                        <button className='btn-hero'>Discover Now</button>
                     </div>
                     <div className='col-sm-12 col-lg-6 p-5'>
                         <img className='banner-img' src={banner} alt="" srcset="" />
