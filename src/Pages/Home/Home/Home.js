@@ -1,4 +1,5 @@
 import React from 'react';
+import ExtraBanner from '../../ExtraBanner/ExtraBanner';
 import Loding from '../../Loding/Loding';
 import SecondBanner from '../2ndBanner/SecondBanner';
 import Banner from '../Banner/Banner';
@@ -15,6 +16,7 @@ const Home = () => {
             <SecondBanner></SecondBanner>
             <Items></Items>
             <ThirdBanner></ThirdBanner>
+            <ExtraBanner></ExtraBanner>
         </div>
     );
 };
