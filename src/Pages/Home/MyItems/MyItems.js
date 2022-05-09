@@ -1,35 +1,76 @@
-import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../../firebase.init';
-import './MyItems.css'
+import axios from "axios";
+import { signOut } from "firebase/auth";
+import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init";
+import useItems from "../../../Hooks/useItems";
+import ShowMyItems from "../ShowMyItems/ShowMyItems";
+import "./MyItems.css";
 
 const MyItems = () => {
+  const [myItems, setMyItems] = useState([]);
 
-    const [user] = useAuthState(auth);
-    const [myItems, setMyItems] = useState([])
+  const [user] = useAuthState(auth);
 
-    useEffect(()=>{
-        const email = user.email
-        const url = `http://localhost:5000/item?email=${email}`;
-        fetch (url, {
-            headers: {
-                'authorization': `${user.email} ${localStorage.getItem("accessToken")}`,
-              },
-        })
-        .then(res => res.json())
-        .then(data => setMyItems(data))
-    },[user.email])
+  // const [items, setItems] = useItems();
 
-    return (
-        <div>
-            <h1>This is my items: {myItems.length}</h1>
-            <ol>
-                {
-                    myItems.map(item => <li>{item.name}</li>)
-                }
-            </ol>
+  const handleDelete = (id) => {
+    const proceed = window.confirm("Are you sure?");
+    if (proceed) {
+      const url = `https://peaceful-beyond-14881.herokuapp.com/item/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          const remaining = myItems.filter((item) => item._id !== id);
+          setMyItems(remaining);
+        });
+    }
+  };
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const email = user.email;
+
+    const getItems = async () => {
+      const url = `https://peaceful-beyond-14881.herokuapp.com/myItems?email=${email}`;
+      try {
+        const { data } = await axios.get(url, {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+        });
+        setMyItems(data);
+      } catch (error) {
+        console.log(error.message);
+        if (error.response.status === 403 || error.response.status === 401) {
+          signOut(auth);
+          navigate("/login");
+        }
+      }
+    };
+    getItems();
+  }, [user]);
+
+  return (
+    <div>
+      <div className="container">
+        <div className="AllItems-section mt-5">
+          {myItems.map((item) => (
+            <ShowMyItems
+              key={item._id}
+              item={item}
+              handleDelete={handleDelete}
+            ></ShowMyItems>
+          ))}
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default MyItems;

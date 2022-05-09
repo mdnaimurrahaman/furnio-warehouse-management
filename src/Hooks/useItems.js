@@ -4,11 +4,11 @@ const useItems = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/item")
+    fetch("https://peaceful-beyond-14881.herokuapp.com/item")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
-  return [items, setItems]
+  return [items, setItems];
 };
 
 export default useItems;
