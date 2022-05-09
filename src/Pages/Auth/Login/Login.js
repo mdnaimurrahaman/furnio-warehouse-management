@@ -10,6 +10,7 @@ import "./Login.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Loding from "../../Loding/Loding";
 
 const Login = () => {
   const [userInfo, setUserInfo] = useState({
@@ -125,6 +126,7 @@ const Login = () => {
   //   if (user) {
   //     navigate(from, { replace: true });
   //   }
+
 
   return (
     <div className="login-container">

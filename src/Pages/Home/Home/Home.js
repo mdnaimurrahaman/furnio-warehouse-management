@@ -1,4 +1,5 @@
 import React from 'react';
+import Loding from '../../Loding/Loding';
 import SecondBanner from '../2ndBanner/SecondBanner';
 import Banner from '../Banner/Banner';
 import Items from '../Items/Items';

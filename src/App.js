@@ -14,6 +14,7 @@ import NotFound from '../../furnio-minimal-design/src/Pages/Shared/NotFound/NotF
 import ItemDetail from './Pages/ItemDetail/ItemDetail';
 import RequireAuth from '../src/Pages/Auth/RequireAuth/RequireAuth';
 import { ToastContainer } from 'react-toastify';
+import About from './Pages/About/About';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
         <Route path='/manageItems' element={
           <RequireAuth>
             <ManageItems></ManageItems>
