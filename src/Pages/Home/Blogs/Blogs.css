@@ -25,3 +25,8 @@
         flex-direction: column;
     }
   }
+
+  .side__box{
+    display: flex;
+    flex-direction: column;
+  }

@@ -5,8 +5,3 @@
 .extra-banner img{
     width: 100%;
 }
-
-.box {
-    display: flex;
-    flex-direction: column;
-}
