@@ -54,7 +54,7 @@ const MyItems = () => {
       }
     };
     getItems();
-  }, [user]);
+  }, [navigate, user]);
 
   return (
     <div>

@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import "./AddItems.css";
 import auth from "../../../firebase.init";
 import { toast } from "react-toastify";
-import axios from "axios";
+
 
 const AddITems = () => {
   const [user] = useAuthState(auth);
@@ -34,7 +34,6 @@ const AddITems = () => {
     <div className="login-container">
       <div className="login-title">Item Detail</div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        {/* <input placeholder="User Email" value={user.email} disabled readOnly {...register("email", { required: true})} /> */}
         <input
           placeholder="Item Name"
           required

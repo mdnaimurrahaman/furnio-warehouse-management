@@ -1,6 +1,6 @@
 ## Furnio Minimal Design
-### Live Site : https://furnio-minimal-design.web.app/
-### Server Site Code Link : https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-mdnaimurrahaman.git
+### Live Site : 
+### Server Site Code Link :
 ### This is inventory management Website 
 ### This Website Has lot of feature 
 ### 1. This Website has Add Item Section and you can add your Itesm using add item section
